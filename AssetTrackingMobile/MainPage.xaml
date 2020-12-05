@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AssetTrackingMobile.MainPage"
+             x:Name="This">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Prueba IoT Beacon Tracking"
+               FontAttributes="Bold"
+               FontSize="Title"
+               HorizontalOptions="Center"
+               TextColor="#0062ad"
+               Margin="10, 10, 0, 0"/>
+
+        <Button x:Name="startStopButton"
+                Text="Iniciar" 
+                Clicked="OnStartStopClicked" />
+
+        <Label Text="Mensajes al Hub"
+               FontAttributes="Bold"
+               FontSize="Subtitle"
+               Margin="10,20,0,0" />
+
+        <Label Margin="10,0,0,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Mensajes enviados: " />
+                    <Span Text="{Binding MessagesSent}" ForegroundColor="#0062ad" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label Margin="10,0,0,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Errores de envio: " />
+                    <Span Text="{Binding SendFailures}" ForegroundColor="#0062ad" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label Margin="10,0,0,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Latitud: " />
+                    <Span Text="{Binding Latitude}" BindingContext="{x:Reference Name=This}" ForegroundColor="#0062ad" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        
+        <Label Margin="10,0,0,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Longitud: " />
+                    <Span Text="{Binding Longitude}" BindingContext="{x:Reference Name=This}" ForegroundColor="#0062ad" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label Margin="10,0,0,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Timestamp: " />
+                    <Span Text="{Binding Timestamp, StringFormat='{0:dd/MM/yyyy HH:mm:ss}'}" BindingContext="{x:Reference Name=This}" ForegroundColor="#0062ad" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label Text="Beacons Detectados"
+               FontAttributes="Bold"
+               FontSize="Subtitle"
+               Margin="10,20,0,0" />
+
+        <ListView  x:Name="ReceivedBeaconsView" ItemsSource ="{Binding ReceivedBeacons}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Margin="10" Orientation="Vertical">
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="UUID: " FontAttributes="Bold"/>
+                                        <Span Text="{Binding Id1}" FontAttributes="Bold" ForegroundColor="#0062ad" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Major: "/>
+                                        <Span Text="{Binding Id2}" ForegroundColor="#0062ad" />
+                                        <Span Text=" | Minor: "/>
+                                        <Span Text="{Binding Id3}" ForegroundColor="#0062ad" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="RSSI [dB]: "/>
+                                        <Span Text="{Binding Rssi}" ForegroundColor="#0062ad" />
+                                        <Span Text=" | Timestamp: "/>
+                                        <Span Text="{Binding LastReceivedDateTime, StringFormat='{0:HH:mm:ss}'}" ForegroundColor="#0062ad" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                           
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>

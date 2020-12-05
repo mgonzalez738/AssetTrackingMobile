@@ -1,0 +1,14 @@
+D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\bin\Debug\netstandard2.0\AssetTrackingMobile.deps.json
+D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\bin\Debug\netstandard2.0\AssetTrackingMobile.dll
+D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\bin\Debug\netstandard2.0\ref\AssetTrackingMobile.dll
+D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\bin\Debug\netstandard2.0\AssetTrackingMobile.pdb
+D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\AssetTrackingMobile.AssemblyInfoInputs.cache
+D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\AssetTrackingMobile.AssemblyInfo.cs
+D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\AssetTrackingMobile.dll
+D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\ref\AssetTrackingMobile.dll
+D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\AssetTrackingMobile.pdb
+D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\AssetTrackingMobile.csproj.CoreCompileInputs.cache
+D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\AssetTrackingMobile.csprojAssemblyReference.cache
