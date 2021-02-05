@@ -8,10 +8,10 @@ namespace AssetTrackingMobile
     /// </summary>
     class DeviceReadingMessage
     {
-        public string DateTime { get; set; }
-        public string Latitude { get; set; }
-        public string Longitude { get; set; }
-        public BeaconMessage[] Beacons { get; set; }
+        public string timestamp { get; set; }
+        public string latitude { get; set; }
+        public string longitude { get; set; }
+        public BeaconMessage[] beacons { get; set; }
        
     }
 

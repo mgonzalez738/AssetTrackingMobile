@@ -11,4 +11,3 @@ D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\ref
 D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\AssetTrackingMobile.pdb
 D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\AssetTrackingMobile.csproj.CoreCompileInputs.cache
 D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\XamlC.stamp
-D:\Tracking\AssetTrackingMobile\AssetTrackingMobile\obj\Debug\netstandard2.0\AssetTrackingMobile.csprojAssemblyReference.cache

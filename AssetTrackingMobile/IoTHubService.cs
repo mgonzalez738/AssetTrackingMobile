@@ -12,7 +12,7 @@ namespace AssetTrackingMobile
         // The device connection string to authenticate the device with your IoT hub.
         // Using the Azure CLI:
         // az iot hub device-identity show-connection-string --hub-name {YourIoTHubName} --device-id myXamarinDevice --output table
-        private static readonly string _iotHubConnectionString = "yourconnectionstring";
+        private static readonly string _iotHubConnectionString = "HostName=tracking-gie.azure-devices.net;DeviceId=601ae1065ea8d634b8146241;SharedAccessKey=PTSnLdenhQIsNkYqE7EKf6QBYFMJ2Inl2TOxt8v2lE0=";
 
         private static DeviceClient _deviceClient;
         private IoTClientStatistics _statistics = new IoTClientStatistics();
@@ -41,11 +41,13 @@ namespace AssetTrackingMobile
             // IoT Hub message is a specific object that takes a byte array. 
             // You can then do many things...
             Message message = new Message(Encoding.UTF8.GetBytes(messageContents));
-            
+
             // ...For example: add a custom application property to the message.
             // An IoT hub can filter on these properties without access to the message body.
             // Here we add the current runtime platform (Android, iOS, ...)
-            message.Properties.Add("platform", Device.RuntimePlatform);
+            //message.Properties.Add("platform", Device.RuntimePlatform);
+            message.Properties.Add("deviceType", "mobile-gateway");
+            message.Properties.Add("messageType", "data");
 
             try
             {

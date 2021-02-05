@@ -221,7 +221,7 @@ namespace AssetTrackingMobile
             {
                 _sendTaskCancellationTokenSource = new CancellationTokenSource();
 
-                Device.StartTimer(TimeSpan.FromSeconds(10), () =>
+                Device.StartTimer(TimeSpan.FromSeconds(60), () =>
                 {
                     if (_sendTaskCancellationTokenSource != null &&
                         _sendTaskCancellationTokenSource.IsCancellationRequested)
@@ -262,16 +262,16 @@ namespace AssetTrackingMobile
 
             var location = await GetCoordinatesAsync();
 
-            Timestamp = DateTime.Now;
+            Timestamp = DateTime.UtcNow;
             Latitude = (Single)location.Latitude;
             Longitude = (Single)location.Longitude;
 
             DeviceReadingMessage msg = new DeviceReadingMessage()
             {
-                DateTime = Timestamp.ToString(),
-                Latitude = location.Latitude.ToString("F6"),
-                Longitude = location.Longitude.ToString("F6"),
-                Beacons = beacons.ToArray()
+                timestamp = Timestamp.ToString("o", System.Globalization.CultureInfo.InvariantCulture),
+                latitude = location.Latitude.ToString("F6"),
+                longitude = location.Longitude.ToString("F6"),
+                beacons = beacons.ToArray()
             };
 
             
